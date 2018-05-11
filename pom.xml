@@ -9,12 +9,12 @@
 
 	<name>springboot-ureport</name>
 	<description>测试ureport集成springboot</description>
-	<url>https://github.com/liqiaolin520/Poi-ExcelHelper</url>
+	<url>https://github.com/liqiaolin520/springboot-ureport</url>
 
 	<licenses>
 		<license>
 			<name>The MIT License (MIT)</name>
-			<url>https://github.com/liqiaolin520/Poi-ExcelHelper/blob/master/LICENSE</url>
+			<url>https://github.com/liqiaolin520/springboot-ureport/blob/master/LICENSE</url>
 		</license>
 	</licenses>
 
@@ -53,11 +53,6 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper</artifactId>
-			<version>5.1.2</version>
-		</dependency>
-		<dependency>
 			<groupId>com.bstek.ureport</groupId>
 			<artifactId>ureport2-console</artifactId>
 			<version>2.2.5-SNAPSHOT</version>
@@ -79,12 +74,6 @@
 			<groupId>commons-pool</groupId>
 			<artifactId>commons-pool</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.mchange</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>0.9.2.1</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>

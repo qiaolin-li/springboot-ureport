@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: springboot-ureport
-Implementation-Version: 1.0
-Built-By: Administrator
-Implementation-Vendor-Id: indi.qiaolin
-Build-Jdk: 1.8.0_25
-Implementation-URL: https://github.com/liqiaolin520/Poi-ExcelHelper
-Created-By: Maven Integration for Eclipse
-

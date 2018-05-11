@@ -1,0 +1,31 @@
+package indi.qiaolin.test.ureport.config;
+
+import javax.servlet.Servlet;
+
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
+
+import com.bstek.ureport.console.UReportServlet;
+
+/**
+ *  Ureport2 配置类
+ * @author qiaolin
+ * @version 2018年5月9日
+ */
+
+@ImportResource("classpath:ureport-console-context.xml")
+@EnableAutoConfiguration
+@Configuration
+@ComponentScan(basePackages = "com.qiaolin.test")
+public class UreportConfig {
+	
+	@Bean
+	public ServletRegistrationBean<Servlet> buildUreportServlet(){
+		return new ServletRegistrationBean<Servlet>(new UReportServlet(), "/ureport/*");
+	}
+	
+}

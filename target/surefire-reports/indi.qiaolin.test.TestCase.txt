@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: indi.qiaolin.test.TestCase
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.64 s <<< FAILURE! - in indi.qiaolin.test.TestCase
+test(indi.qiaolin.test.TestCase)  Time elapsed: 0.011 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ureportFileMapper' defined in file [D:\eclipse_4.6\workspace\spring-ureport\target\classes\indi\qiaolin\test\ureport\mapper\UreportFileMapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'UreportFileEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: UreportFileEntity
+Caused by: java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'UreportFileEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: UreportFileEntity
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'UreportFileEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: UreportFileEntity
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'UreportFileEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: UreportFileEntity
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'UreportFileEntity'.  Cause: java.lang.ClassNotFoundException: Cannot find class: UreportFileEntity
+Caused by: java.lang.ClassNotFoundException: Cannot find class: UreportFileEntity
+

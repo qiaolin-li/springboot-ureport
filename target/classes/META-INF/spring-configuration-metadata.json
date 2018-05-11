@@ -1,0 +1,102 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory",
+      "type": "indi.qiaolin.test.ureport.ftp.FTPClientFactory"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientUtils",
+      "name": "ftp.utils",
+      "type": "indi.qiaolin.test.ureport.ftp.FTPClientUtils"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.provider.FTPProvider",
+      "name": "ureport.ftp.provider",
+      "type": "indi.qiaolin.test.ureport.provider.FTPProvider"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.provider.MySQLProvider",
+      "name": "ureport.mysql.provider",
+      "type": "indi.qiaolin.test.ureport.provider.MySQLProvider"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.client-timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.encoding",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.file-type",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.hostname",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.passive-mode",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.rename-uploaded",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.retry-times",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.thread-num",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.ftp.FTPClientFactory",
+      "name": "ftp.factory.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.provider.FTPProvider",
+      "name": "ureport.ftp.provider.prefix",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.provider.FTPProvider",
+      "name": "ureport.ftp.provider.report-files",
+      "type": "java.util.List<com.bstek.ureport.provider.report.ReportFile>"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.provider.MySQLProvider",
+      "name": "ureport.mysql.provider.prefix",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "indi.qiaolin.test.ureport.provider.MySQLProvider",
+      "name": "ureport.mysql.provider.report-files",
+      "type": "java.util.List<com.bstek.ureport.provider.report.ReportFile>"
+    }
+  ]
+}

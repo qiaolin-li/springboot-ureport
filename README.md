@@ -11,7 +11,7 @@
 >
 > 5、提供Mysql、FTP报表文件存储
 
-![https://github.com/settings/profile]("我的图像")
+![https://avatars1.githubusercontent.com/u/32925394?s=400&u=45cc9f01f416f98b084c7f74274200ff4da0631a&v=4]("我的图像")
 
 |  个人相关  |                备注                 |
 | :----: | :-------------------------------: |

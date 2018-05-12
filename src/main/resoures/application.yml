@@ -15,12 +15,6 @@ mybatis:
     typeAliasesPackage: indi.qiaolin.test.ureport.entity
     mapperLocations: classpath:/indi/qiaolin/**/mapper/*.xml  
   
-# 分页插件
-pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql  
   
 # 日志配置
 logging:
@@ -32,14 +26,8 @@ ureport.mysql.provider:
   prefix: qiaolin-
   disabled: false
 
-
 # FTP 配置
 ftp: 
- utils: 
-   hostname: 192.168.56.1
-   port: 21
-   username: Administrator
-   password: Liqiaolin
  factory: 
   hostname: 192.168.56.1
   port: 21 

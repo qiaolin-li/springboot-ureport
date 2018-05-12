@@ -17,6 +17,13 @@ import org.springframework.stereotype.Component;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * FTPClient 工具类，代理ftpClient得操作。
+ * @author qiaolin
+ * @version 2018年5月9日
+ *
+ */
+
 @Slf4j
 @Setter
 @ConfigurationProperties(prefix = "ftp.utils")

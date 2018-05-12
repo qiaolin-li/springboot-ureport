@@ -60,7 +60,7 @@ public class FTPClientFactory implements PoolableObjectFactory<FTPClient>{
 		FTPClientConfig conf = new FTPClientConfig(FTPClientConfig.SYST_NT);
 		conf.setServerLanguageCode("zh");
 		ftpClient.configure(conf);
-		//		ftpClient.setFileType(fileType);
+		//ftpClient.setFileType(fileType);
 //		ftpClient.setBufferSize(1024);
 //		ftpClient.setControlEncoding(encoding);
 //		if (passiveMode) {

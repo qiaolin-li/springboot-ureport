@@ -1,18 +1,16 @@
 package indi.qiaolin.test.ureport.ftp;
 
-import java.io.IOException;
-
+import indi.qiaolin.test.ureport.exception.ConnectionPoolException;
+import indi.qiaolin.test.ureport.properties.FTPProperties;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPClientConfig;
 import org.apache.commons.net.ftp.FTPConnectionClosedException;
 import org.apache.commons.net.ftp.FTPReply;
 import org.apache.commons.pool.PoolableObjectFactory;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import indi.qiaolin.test.ureport.exception.ConnectionPoolException;
-import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+import java.io.IOException;
 
 /**
  * FTPClient 工厂类， 提供FTPClient实例的创建、销毁、验证工作
@@ -21,22 +19,11 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 
-@Data
 @Slf4j
-@Component
-@ConfigurationProperties("ftp.factory")
 public class FTPClientFactory implements PoolableObjectFactory<FTPClient>{
-	private String hostname; // 地址
-	private int port; // 端口
-	private String username; // 用户名
-	private String password; // 密码
-	private boolean passiveMode; // 被动模式
-	private String encoding = "UTF-8"; // 文件编码
-	private int clientTimeout; // 客户端超时毫秒数
-	private int threadNum; // 线程数
-	private int fileType = 2; // 文件上传形式，默认二进制; 参考FTP类中常量  
-	private boolean renameUploaded;
-	private int retryTimes;
+
+	@Autowired
+	private FTPProperties properties;
 	
 	/**
 	 * 创建一个FTPClient对象
@@ -45,14 +32,14 @@ public class FTPClientFactory implements PoolableObjectFactory<FTPClient>{
 	public FTPClient makeObject() throws Exception {
 		FTPClient ftpClient = new FTPClient();
 //		ftpClient.setConnectTimeout(clientTimeout);
-		ftpClient.connect(hostname, port);
+		ftpClient.connect(properties.getHostname(), properties.getPort());
 		int replyCode = ftpClient.getReplyCode();
 		if(!FTPReply.isPositiveCompletion(replyCode)){
 			ftpClient.disconnect();
 			log.warn("FTPServer 拒绝连接 !");
 			return null;
 		}
-		boolean login = ftpClient.login(username, password);
+		boolean login = ftpClient.login(properties.getUsername(), properties.getPassword());
 		if(!login){
 			throw new FTPConnectionClosedException("FTPServer 登录失败！");
 		}

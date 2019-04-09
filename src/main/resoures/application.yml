@@ -5,9 +5,9 @@ server:
   
 spring:
   datasource:
-     url: jdbc:mysql://127.0.0.1:3306/springboot-ureport?useUnicode=true&characterEncoding=utf-8
+     url: jdbc:mysql://192.168.153.131:3306/springboot-ureport?useUnicode=true&characterEncoding=utf-8
      username: root
-     password: 
+     password: 123456
      driver-class-name: com.mysql.jdbc.Driver        
         
 # MyBatis  
@@ -27,19 +27,22 @@ ureport.mysql.provider:
   disabled: false
 
 # FTP 配置
-ftp: 
- factory: 
+ftp:
+ factory:
+#   不启用ftp
+  enable: false
   hostname: 192.168.56.1
-  port: 21 
+  port: 21
   username: Administrator
   password: Liqiaolin
-  client-timeout: 10000    
+  client-timeout: 10000
   encoding: utf8
 #  retry-times: 
 #  passive-mode: 
 #  file-type: 
 #  rename-uploaded: true
-    
+#  enable: true
+
 # ureport FTP 存储
 ureport:
   ftp:

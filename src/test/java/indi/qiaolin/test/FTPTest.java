@@ -1,9 +1,8 @@
 package indi.qiaolin.test;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-
+import indi.qiaolin.test.ureport.ftp.FTPClientFactory;
+import indi.qiaolin.test.ureport.ftp.FTPClientPool;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPClientConfig;
 import org.apache.commons.net.ftp.FTPConnectionClosedException;
@@ -11,9 +10,9 @@ import org.apache.commons.net.ftp.FTPReply;
 import org.junit.Before;
 import org.junit.Test;
 
-import indi.qiaolin.test.ureport.ftp.FTPClientFactory;
-import indi.qiaolin.test.ureport.ftp.FTPClientPool;
-import lombok.extern.slf4j.Slf4j;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 /**
  * FTP 普通连接性能 与 连接池测试性能 测试; 以目录下1000个文件测试上传性能。
@@ -87,11 +86,11 @@ public class FTPTest {
 	public void testFtpClientPool() {
 		long start = System.currentTimeMillis();
 		FTPClientFactory factory = new FTPClientFactory();
-		factory.setHostname("192.168.56.1");
-		factory.setPort(21);
-		factory.setUsername("Administrator");
-		factory.setPassword("Liqiaolin");
-		factory.setEncoding("UTF-8");
+//		factory.setHostname("192.168.56.1");
+//		factory.setPort(21);
+//		factory.setUsername("Administrator");
+//		factory.setPassword("Liqiaolin");
+//		factory.setEncoding("UTF-8");
 		FTPClientPool ftpClientPool = new FTPClientPool(factory);
 		for (File file : files) {
 			try {

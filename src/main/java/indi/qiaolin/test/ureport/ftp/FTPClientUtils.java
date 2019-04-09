@@ -1,21 +1,14 @@
 package indi.qiaolin.test.ureport.ftp;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
-
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
-import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * FTPClient 工具类，代理ftpClient得操作。
@@ -26,11 +19,11 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Setter
-@ConfigurationProperties(prefix = "ftp.utils")
-@Component
 public class FTPClientUtils {
 
-	// FTP 客户端连接池
+	/**
+	 * FTP 客户端连接池
+ 	 */
 	@Autowired
 	private FTPClientPool ftpClientPool;
 

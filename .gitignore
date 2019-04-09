@@ -3,6 +3,9 @@
 
 /target/*
 .settings/*
+.idea/*
+
+*.iml
 
 # Log file
 *.log

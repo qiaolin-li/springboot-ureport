@@ -70,7 +70,6 @@ public class ConnectionPool {
 
 	/**
 	 * 设置连接池的初始大小
-	 * 
 	 * @param 用于设置初始连接池中连接的数量
 	 */
 	public void setInitialConnections(int initialConnections) {

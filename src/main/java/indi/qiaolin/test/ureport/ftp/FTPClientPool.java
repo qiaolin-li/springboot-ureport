@@ -1,19 +1,15 @@
 package indi.qiaolin.test.ureport.ftp;
 
+import indi.qiaolin.test.ureport.exception.ConnectionPoolException;
+import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.pool.ObjectPool;
+import org.apache.commons.pool.PoolableObjectFactory;
+
+import javax.annotation.PreDestroy;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
-
-import javax.annotation.PreDestroy;
-
-import org.apache.commons.net.ftp.FTPClient;
-import org.apache.commons.pool.ObjectPool;
-import org.apache.commons.pool.PoolableObjectFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import indi.qiaolin.test.ureport.exception.ConnectionPoolException;
 
 /**
  *  FTP 客户端连接池
@@ -22,12 +18,11 @@ import indi.qiaolin.test.ureport.exception.ConnectionPoolException;
  *
  */
 
-@Component
 public class FTPClientPool implements ObjectPool<FTPClient>{
 	private FTPClientFactory factory;
+
 	private BlockingQueue<FTPClient> pool;
 	
-	@Autowired
 	public FTPClientPool(FTPClientFactory factory) {
 		this(10, factory);
 	} 

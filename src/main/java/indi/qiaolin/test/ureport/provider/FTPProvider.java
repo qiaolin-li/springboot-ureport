@@ -1,21 +1,17 @@
 package indi.qiaolin.test.ureport.provider;
 
+import com.bstek.ureport.provider.report.ReportFile;
+import com.bstek.ureport.provider.report.ReportProvider;
+import indi.qiaolin.test.ureport.ftp.FTPClientUtils;
+import lombok.Setter;
+import org.apache.commons.net.ftp.FTPFile;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
-import org.apache.commons.net.ftp.FTPFile;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-import com.bstek.ureport.provider.report.ReportFile;
-import com.bstek.ureport.provider.report.ReportProvider;
-
-import indi.qiaolin.test.ureport.ftp.FTPClientUtils;
-import lombok.Setter;
 
 /**
  * FTP文件服务器 报表存储
@@ -25,8 +21,6 @@ import lombok.Setter;
  */
 
 @Setter
-@Component
-@ConfigurationProperties(prefix = "ureport.ftp.provider")
 public class FTPProvider implements ReportProvider{
 	
 	private static final String NAME = "ftp-provider";

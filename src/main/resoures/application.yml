@@ -1,7 +1,6 @@
 # Server settings  
 server:  
-    port:8080  
-    address:localhost  
+    port: 8080
   
 spring:
   datasource:
